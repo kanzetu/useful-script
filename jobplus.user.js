@@ -7,6 +7,7 @@
 // @include      https://banweb.cityu.edu.hk/pls/PROD/hwwjpostenq_cityu.main
 // @require  https://gist.github.com/raw/2625891/waitForKeyElements.js
 // @require http://code.jquery.com/jquery-3.4.1.min.js
+// @updateURL   https://github.com/kanzetu/useful-script/raw/main/jobplus.user.js
 // @grant    GM_xmlhttpRequest
 // ==/UserScript==
 
@@ -43,15 +44,20 @@ function f(){
                                             return;
                                         }
                                         var pyLd =  rspObj.response;
-                                        var close = $(pyLd).find("tbody tr").eq(12).find("td").eq(0).text()
+                                        var d = 0
+                                        if ($(pyLd).find("tbody tr").length != 13){
+                                            d = 2
+                                        }
+                                        console.log($(pyLd).find("tbody tr").length)
+                                        var close = $(pyLd).find("tbody tr").eq(12-d).find("td").eq(0).text()
                                         e.html(e.html() + "<td><small>" + close + "</small></td>")
-                                        var vacancies = $(pyLd).find("tbody tr").eq(5).find("td").eq(0).text()
+                                        var vacancies = $(pyLd).find("tbody tr").eq(5-d).find("td").eq(0).text()
                                         e.html(e.html() + "<td><small>" + vacancies + "</small></td>")
-                                        var salary = $(pyLd).find("tbody tr").eq(10).find("td").eq(0).text()
+                                        var salary = $(pyLd).find("tbody tr").eq(10-d).find("td").eq(0).text()
                                         e.html(e.html() + "<td><small>" + salary + "</small></td>")
-                                        var Description = $(pyLd).find("tbody tr").eq(8).find("td").eq(0).html()
+                                        var Description = $(pyLd).find("tbody tr").eq(8-d).find("td").eq(0).html()
                                         e.html(e.html() + "<td><small>" + Description + "</small></td>")
-                                        var Requirement = $(pyLd).find("tbody tr").eq(9).find("td").eq(0).html()
+                                        var Requirement = $(pyLd).find("tbody tr").eq(9-d).find("td").eq(0).html()
                                         e.html(e.html() + "<td><small>" + Requirement + "</small></td>")
                                         console.log(salary)
                                     }
