@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         JobPlus
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  try to take over the world!
 // @author       kanzetu
 // @include      https://banweb.cityu.edu.hk/pls/PROD/hwwjpostenq_cityu.main
@@ -11,8 +11,6 @@
 // ==/UserScript==
 
 waitForKeyElements (".body", f);
-
-var current_row
 
 function f(){
     var q1 = $(".body table tbody")
