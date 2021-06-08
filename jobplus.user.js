@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         JobPlus
 // @namespace    http://tampermonkey.net/
-// @version      0.3
+// @version      0.4
 // @description  try to take over the world!
 // @author       kanzetu
 // @include      https://banweb.cityu.edu.hk/pls/PROD/hwwjpostenq_cityu.main
