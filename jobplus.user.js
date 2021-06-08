@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         JobPlus
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  try to take over the world!
 // @author       kanzetu
 // @include      https://banweb.cityu.edu.hk/pls/PROD/hwwjpostenq_cityu.main
@@ -53,7 +53,7 @@ function f(){
                                         e.html(e.html() + "<td><small>" + salary + "</small></td>")
                                         var Description = $(pyLd).find("tbody tr").eq(8).find("td").eq(0).html()
                                         e.html(e.html() + "<td><small>" + Description + "</small></td>")
-                                        var Requirement = $(pyLd).find("tbody tr").eq(8).find("td").eq(0).html()
+                                        var Requirement = $(pyLd).find("tbody tr").eq(9).find("td").eq(0).html()
                                         e.html(e.html() + "<td><small>" + Requirement + "</small></td>")
                                         console.log(salary)
                                     }
